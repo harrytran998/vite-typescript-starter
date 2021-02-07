@@ -4,11 +4,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const count = ref(0)
+ref: count = 0
 
 function increment() {
-  count.value += 1
+  count += 1
 }
 </script>
