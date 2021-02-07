@@ -1,8 +1,13 @@
 module.exports = {
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
-  extends: ['plugin:@typescript-eslint/recommended', 'airbnb-typescript/base'],
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'airbnb-typescript/base',
+  ],
   plugins: ['vue', '@typescript-eslint'],
   rules: {
     // TS
@@ -31,5 +36,8 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-types': 'off',
+
+    // Vue
+    'vue/max-attributes-per-line': ['warn', { singleline: 5 }],
   },
 }
